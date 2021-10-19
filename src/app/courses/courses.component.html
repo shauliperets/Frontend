@@ -1,0 +1,34 @@
+
+<form [formGroup]="coursesForm">
+
+<table datatable >
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Descrition</th>
+        <th>Create Date</th>
+        <th>Update Date</th>
+        <th>Subscribes</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let course of courses">
+        <td>{{ course.name }}</td>
+        <td>{{ course.description }}</td>
+        <td>{{ course.createDate }}</td>
+        <td>{{ course.updateDate }}</td>
+        <td>{{ course.subscribes }}</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><input formControlName="name" name="name" type="text"></td>
+        <td><input formControlName="description" name="description" type="text"></td>
+        <td><input readonly formControlName="createDate" name="createDate" type="text" value="{{ this.date }}"></td>
+        <td><input readonly formControlName="updateDate" name="updateDate" type="text" value="{{ this.date }}"></td>
+        <td><input formControlName="subscribes" name="subscribes" type="text"></td>
+        <td><button (click)="onAdd()">Add</button></td>
+    </tr>
+    </tbody>
+  </table>
+</form>

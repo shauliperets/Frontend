@@ -1,0 +1,15 @@
+
+
+<form [formGroup]="userForm">
+
+    <label for="username">Username</label>
+    <input formControlName="username" name="username" type="text">
+    <br>
+    <label for="password">Password</label>
+    <input formControlName="password" name="password" type="password">
+    <br/>
+    <button (click)="onClick()">Login</button>
+    <br/>
+    <input formControlName="alerts" name="alerts" readonly style="border: 0px;" >
+
+</form>

@@ -1,0 +1,27 @@
+<p>users works!</p>
+
+<form>
+
+    <table datatable>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Descrition</th>
+            <th>Create Date</th>
+            <th>Update Date</th>
+            <th>Subscribes</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let course of courses">
+            <td>{{ course.name }}</td>
+            <td>{{ course.description }}</td>
+            <td>{{ course.createDate }}</td>
+            <td>{{ course.updateDate }}</td>
+            <td>{{ course.subscribes }}</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
